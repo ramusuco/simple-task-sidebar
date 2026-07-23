@@ -1,0 +1,81 @@
+{
+  "name": "task-sidebar",
+  "displayName": "Task Sidebar",
+  "description": "Lists VS Code tasks in the sidebar and runs them with one click.",
+  "version": "0.1.0",
+  "publisher": "ramusuco",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "tasks",
+    "sidebar",
+    "task runner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramusuco/task-sidebar.git"
+  },
+  "homepage": "https://github.com/ramusuco/task-sidebar#readme",
+  "bugs": {
+    "url": "https://github.com/ramusuco/task-sidebar/issues"
+  },
+  "activationEvents": [
+    "onView:taskSidebar.tasks",
+    "onCommand:taskSidebar.refresh",
+    "onCommand:taskSidebar.runTask"
+  ],
+  "main": "./src/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "taskSidebar.refresh",
+        "title": "Refresh Tasks",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "taskSidebar.runTask",
+        "title": "Run Task"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "taskSidebar",
+          "title": "Tasks",
+          "icon": "resources/tasks.svg"
+        }
+      ]
+    },
+    "views": {
+      "taskSidebar": [
+        {
+          "id": "taskSidebar.tasks",
+          "name": "Tasks"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "taskSidebar.refresh",
+          "when": "view == taskSidebar.tasks",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "check": "node --check src/extension.js",
+    "test": "npm run check"
+  }
+}
