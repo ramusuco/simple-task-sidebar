@@ -4,6 +4,7 @@
   "description": "Lists VS Code tasks in the sidebar and runs them with one click.",
   "version": "0.1.1",
   "publisher": "rmsc",
+  "icon": "resources/icon.png",
   "license": "UNLICENSED",
   "engines": {
     "vscode": "^1.85.0"
