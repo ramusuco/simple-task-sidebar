@@ -1,6 +1,6 @@
 {
-  "name": "task-sidebar",
-  "displayName": "Task Sidebar",
+  "name": "simple-task-sidebar",
+  "displayName": "Simple Task Sidebar",
   "description": "Lists VS Code tasks in the sidebar and runs them with one click.",
   "version": "0.1.0",
   "publisher": "rmsc",
