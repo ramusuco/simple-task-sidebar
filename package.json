@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ramusuco/task-sidebar.git"
+    "url": "https://github.com/ramusuco/simple-task-sidebar.git"
   },
-  "homepage": "https://github.com/ramusuco/task-sidebar#readme",
+  "homepage": "https://github.com/ramusuco/simple-task-sidebar#readme",
   "bugs": {
-    "url": "https://github.com/ramusuco/task-sidebar/issues"
+    "url": "https://github.com/ramusuco/simple-task-sidebar/issues"
   },
   "activationEvents": [
     "onView:taskSidebar.tasks",
